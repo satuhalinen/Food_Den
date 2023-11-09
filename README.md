@@ -22,3 +22,7 @@ Food Den is a school project done in a course called Software Development Team P
 - George Uzoh
 
 ## Other information
+
+## Task for Mithun
+
+Here is my tasks that I will complete by the deadline.
