@@ -4,9 +4,9 @@ import "./index.css";
 function App() {
   return (
     <>
-      <div className="heroimage">
+      <div className="heroImage">
         <h1>Delicious food is just a click away</h1>
-        <p className="onpicturetext">
+        <p className="onPictureText">
           Whether you're craving the comfort of home-cooked meals, exploring
           exotic cuisines, or seeking a quick bite on a busy day, we've curated
           a menu that caters to every palate.
