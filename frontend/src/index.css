@@ -70,7 +70,7 @@ button:focus-visible {
   }
 }
 
-.heroimage {
+.heroImage {
   background-image: url("/indian_restaurants_brisbane.jpg");
   background-position: center;
   flex-grow: 1;
@@ -86,7 +86,7 @@ button:focus-visible {
   text-align: left;
 }
 
-.onpicturetext {
+.onPictureText {
   bottom: 8px;
   width: 50vw;
   align-self: flex-start;
