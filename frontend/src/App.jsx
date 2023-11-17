@@ -14,7 +14,7 @@ function App() {
       </div>
 
       <div className="aboutUs">
-        <h1>About us</h1>
+        <h2>About us</h2>
         <p className="story">
           Welcome to Food Den! your passport to flavor paradise! We're on a
           mission to bring exceptional food straight to your doorstep,
@@ -24,7 +24,7 @@ function App() {
           celebrating good food, good times, and the ease of dining with Food
           Den. Cheers to savoring the moment!
         </p>
-        <h1 className="menu">Menu</h1>
+        <h2 className="menu">Menu</h2>
       </div>
       <Footer />
     </>
