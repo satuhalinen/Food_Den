@@ -1,37 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Footer from './Footer';
+import "./index.css";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+      <div className="heroImage">
+        <h1>Delicious food is just a click away</h1>
+        <p className="onPictureText">
+          Whether you're craving the comfort of home-cooked meals, exploring
+          exotic cuisines, or seeking a quick bite on a busy day, we've curated
+          a menu that caters to every palate.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="aboutUs">
+        <h2>About us</h2>
+        <p className="story">
+          Welcome to Food Den! your passport to flavor paradise! We're on a
+          mission to bring exceptional food straight to your doorstep,
+          hassle-free. Dive into our curated menu featuring top-notch dishes
+          from local gems to international delights. Ordering is a breeze, and
+          our speedy delivery ensures your meal is hot and fresh. Join us in
+          celebrating good food, good times, and the ease of dining with Food
+          Den. Cheers to savoring the moment!
+        </p>
+        <h2 className="menu">Menu</h2>
+      </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
