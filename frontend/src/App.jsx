@@ -1,9 +1,11 @@
-import "./index.css";
-import Footer from "./Footer";
+import './index.css';
+import Footer from './Footer';
+import Header from './Header';
 
 function App() {
   return (
     <>
+      <Header />
       <div className="heroImage">
         <h1>Delicious food is just a click away</h1>
         <p className="onPictureText">
