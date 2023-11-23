@@ -1,43 +1,34 @@
-import Card from "./components/Card";
-import "./App.css";
-import Carousel from "react-multi-carousel";
-import { foodMenu, responsive } from "./data";
+import './index.css';
+import Footer from './Footer';
+import Header from './Header';
 
 function App() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-
-  const details = foodMenu.map((item) => (
-    <Card
-      name={item.name}
-      url={item.image}
-      price={item.price}
-      description={item.description}
-    />
-  ));
-
   return (
     <>
-      <div className="foodCard">
-        <h1>Food Items</h1>
+      <Header />
+      <div className="heroImage">
+        <h1>Delicious food is just a click away</h1>
+        <p className="onPictureText">
+          Whether you're craving the comfort of home-cooked meals, exploring
+          exotic cuisines, or seeking a quick bite on a busy day, we've curated
+          a menu that caters to every palate.
+        </p>
       </div>
-      <Carousel responsive={responsive}>{details}</Carousel>
+
+      <div className="aboutUs">
+        <h2>About us</h2>
+        <p className="story">
+          Welcome to Food Den! your passport to flavor paradise! We're on a
+          mission to bring exceptional food straight to your doorstep,
+          hassle-free. Dive into our curated menu featuring top-notch dishes
+          from local gems to international delights. Ordering is a breeze, and
+          our speedy delivery ensures your meal is hot and fresh. Join us in
+          celebrating good food, good times, and the ease of dining with Food
+          Den. Cheers to savoring the moment!
+        </p>
+        <h2 className="menu">Menu</h2>
+      </div>
+      <Footer />
     </>
   );
 }

@@ -14,4 +14,50 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+header {
+  height: 70px;
+  background-color: #ffc634;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 170px;
+}
+.search-grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  padding: 10px 35px;
+  background-color: #ffffff;
+  color: #242424;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.search-icon {
+  color: #535353;
+  margin-right: -35px;
+  z-index: 99;
+}
+.shopping_cart {
+  font-size: 40px;
+  color: #051b2e;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
