@@ -1,8 +1,22 @@
 import "./index.css";
 import Footer from "./Footer";
 import Header from "./Header";
+import Card from "./components/Card";
+import "./App.css";
+import Carousel from "react-multi-carousel";
+import { foodMenu, responsive } from "./data";
 
 function App() {
+
+  const details = foodMenu.map((item) => (
+    <Card
+      name={item.name}
+      url={item.image}
+      price={item.price}
+      description={item.description}
+    />
+  ));
+
   return (
     <>
       <Header />
@@ -26,11 +40,22 @@ function App() {
           celebrating good food, good times, and the ease of dining with Food
           Den. Cheers to savoring the moment!
         </p>
-        <h2 className="menu">Menu</h2>
       </div>
+
+      <div className="foodCard">
+      <h2 className="menu">Menu</h2>
+      <Carousel responsive={responsive}>{details}</Carousel>
+      </div>
+     
       <Footer />
     </>
   );
 }
 
 export default App;
+
+
+
+
+
+

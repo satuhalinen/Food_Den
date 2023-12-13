@@ -2,7 +2,7 @@ export const responsive = {
     superLargeDesktop: {
 
       breakpoint: { max: 4000, min: 1024 },
-      items: 5,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 1024, min: 800 },
