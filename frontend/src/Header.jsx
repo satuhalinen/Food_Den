@@ -1,4 +1,4 @@
-const Header = ({ handleSearch }) => {
+const Header = ({ handleSearch, showCart }) => {
   return (
     <header>
       <div>
@@ -12,7 +12,7 @@ const Header = ({ handleSearch }) => {
         <button className="btn">Home</button>
         <button className="btn">About us</button>
       </div>
-      <span className="material-symbols-outlined shopping_cart">
+      <span onClick={showCart} style={{cursor: "pointer"}} className="material-symbols-outlined shopping_cart">
         shopping_cart
       </span>
     </header>

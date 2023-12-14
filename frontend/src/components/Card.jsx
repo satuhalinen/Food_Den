@@ -9,9 +9,9 @@ function Card(props) {
             <img className='image' src={props.url} alt='img1'/>
             <h3 className='name'>{props.name}</h3>
             <p className='description'>{props.description}</p>
-            <p className='price'>{props.price}</p>
+            <p className='price'>{props.price} €</p>
             <p>
-            <button>Add to cart</button>
+            <button onClick={() => props.addToCart()}>Add to cart</button>
             </p>
         </div>
         
