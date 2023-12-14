@@ -8,23 +8,15 @@ import Carousel from "react-multi-carousel";
 import { foodMenu, responsive } from "./data";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (e) => {
-    const searchString = e.target.value.toLowerCase();
-    setSearchQuery(searchString);
-  }
-
-  const details = foodMenu
-    ?.filter(item => item.name.toLowerCase().includes(searchQuery))
-    ?.map((item) => (
-      <Card
-        name={item.name}
-        url={item.image}
-        price={item.price}
-        description={item.description}
-      />
-    ));
+  const details = foodMenu.map((item, i) => (
+    <Card
+      key={i}
+      name={item.name}
+      url={item.image}
+      price={item.price}
+      description={item.description}
+    />
+  ));
 
   return (
     <>
@@ -52,19 +44,13 @@ function App() {
       </div>
 
       <div className="foodCard">
-      <h2 className="menu">Menu</h2>
-      <Carousel responsive={responsive}>{details}</Carousel>
+        <h2 className="menu">Menu</h2>
+        <Carousel responsive={responsive}>{details}</Carousel>
       </div>
-     
+
       <Footer />
     </>
   );
 }
 
 export default App;
-
-
-
-
-
-
