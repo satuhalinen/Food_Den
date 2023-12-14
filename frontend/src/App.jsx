@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./index.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -6,8 +5,9 @@ import Card from "./components/Card";
 import "./App.css";
 import Carousel from "react-multi-carousel";
 import { foodMenu, responsive } from "./data";
+import { useState } from "react";
 
-function App() {
+function App(handleSearch) {
   const details = foodMenu.map((item, i) => (
     <Card
       key={i}
