@@ -7,13 +7,25 @@ import "./App.css";
 import Carousel from "react-multi-carousel";
 import { foodMenu, responsive } from "./data";
 import Swal from "sweetalert2";
+import { useRef } from "react";
 
 function App() {
+  const menuRef = useRef(null);
+  const aboutUsRef = useRef(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e) => {
     const searchString = e.target.value.toLowerCase();
     setSearchQuery(searchString);
+  };
+
+  const handleClick = (buttonName) => {
+    if (buttonName == "menu") {
+      menuRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (buttonName == "about") {
+      aboutUsRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   let cartItems = [];
@@ -52,7 +64,7 @@ function App() {
   return (
     <>
       <div className="firstViewPort">
-        <Header handleSearch={handleSearch} showCart={showCart} />
+        <Header showCart={showCart} handleClick={handleClick} />
         <div className="heroImage">
           <h1>Delicious food is just a click away</h1>
           <p className="onPictureText">
@@ -64,7 +76,9 @@ function App() {
       </div>
       <div className="secondViewPort">
         <div className="foodCard">
-          <h2 className="menu">Menu</h2>
+          <h2 className="menu" ref={menuRef}>
+            Menu
+          </h2>
           <div className="search-grp">
             <span className="material-symbols-outlined search-icon">
               search
@@ -73,7 +87,7 @@ function App() {
           </div>
           <Carousel responsive={responsive}>{details}</Carousel>
         </div>
-        <div className="aboutUs">
+        <div className="aboutUs" ref={aboutUsRef}>
           <h2>About us</h2>
           <p className="story">
             Welcome to Food Den! your passport to flavor paradise! We're on a
