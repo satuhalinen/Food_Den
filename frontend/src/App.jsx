@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./index.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -7,19 +8,27 @@ import Carousel from "react-multi-carousel";
 import { foodMenu, responsive } from "./data";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const details = foodMenu.map((item) => (
-    <Card
-      name={item.name}
-      url={item.image}
-      price={item.price}
-      description={item.description}
-    />
-  ));
+  const handleSearch = (e) => {
+    const searchString = e.target.value.toLowerCase();
+    setSearchQuery(searchString);
+  }
+
+  const details = foodMenu
+    ?.filter(item => item.name.toLowerCase().includes(searchQuery))
+    ?.map((item) => (
+      <Card
+        name={item.name}
+        url={item.image}
+        price={item.price}
+        description={item.description}
+      />
+    ));
 
   return (
     <>
-      <Header />
+      <Header handleSearch={handleSearch} />
       <div className="heroImage">
         <h1>Delicious food is just a click away</h1>
         <p className="onPictureText">

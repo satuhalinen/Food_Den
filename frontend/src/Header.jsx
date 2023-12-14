@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ handleSearch }) => {
   return (
     <header>
       <div>
@@ -6,7 +6,7 @@ const Header = () => {
       </div>
       <div className="search-grp">
         <span className="material-symbols-outlined search-icon">search</span>
-        <input type="text" className="search" />
+        <input type="text" onChange={handleSearch} className="search" />
       </div>
       <div>
         <button className="btn">Home</button>
