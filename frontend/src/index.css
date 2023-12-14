@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -12,7 +13,8 @@ header {
   align-items: center;
 }
 
-.logo {
+.logo,
+.footerLogo {
   width: 170px;
 }
 .search-grp {
@@ -56,7 +58,7 @@ a:hover {
   justify-content: flex-end;
   color: white;
   text-align: left;
-  height: 100vh;
+  flex-grow: 1;
 }
 
 .onPictureText {
@@ -99,11 +101,12 @@ button:focus-visible {
 }
 
 .aboutUs {
-  height: 778px;
   color: black;
   text-align: center;
-  display: block;
-  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-top: auto;
 }
 
 .story {
@@ -111,6 +114,34 @@ button:focus-visible {
   padding: 0 50px;
 }
 
-.menu {
-  padding-top: 200px;
+.firstViewPort {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.secondViewPort {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.foodCard {
+  flex-grow: 1;
+  padding-top: 50px;
+}
+
+.foodCard h2,
+.aboutUs h2 {
+  padding-bottom: 25px;
+}
+
+footer {
+  background-color: grey;
+  height: 100px;
+}
+
+.footerLogo {
+  padding-top: 20px;
 }
