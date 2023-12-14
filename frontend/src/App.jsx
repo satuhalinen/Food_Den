@@ -6,7 +6,7 @@ import Card from "./components/Card";
 import "./App.css";
 import Carousel from "react-multi-carousel";
 import { foodMenu, responsive } from "./data";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,24 +19,22 @@ function App() {
   let cartItems = [];
 
   const addToCart = (name, price) => {
-    cartItems.push({name, price});
-    
+    cartItems.push({ name, price });
+
     let timerInterval;
     Swal.fire({
-      icon: 'success',
+      icon: "success",
       title: `${name} added to cart`,
       timer: 2000,
-      didOpen: () => timerInterval = setInterval(() => {}, 1000),
+      didOpen: () => (timerInterval = setInterval(() => {}, 1000)),
       willClose: () => clearInterval(timerInterval),
     });
-  }
+  };
 
   const showCart = () => {
-    const cart = cartItems.length > 0
-      ? cartItems
-      : 'Cart is empty';
+    const cart = cartItems.length > 0 ? cartItems : "Cart is empty";
     console.log(cart);
-  }
+  };
 
   const details = foodMenu
     ?.filter((item) => item.name.toLowerCase().includes(searchQuery))
@@ -53,7 +51,6 @@ function App() {
 
   return (
     <>
-
       <div className="firstViewPort">
         <Header handleSearch={handleSearch} showCart={showCart} />
         <div className="heroImage">
@@ -64,9 +61,18 @@ function App() {
             curated a menu that caters to every palate.
           </p>
         </div>
-
       </div>
       <div className="secondViewPort">
+        <div className="foodCard">
+          <h2 className="menu">Menu</h2>
+          <div className="search-grp">
+            <span className="material-symbols-outlined search-icon">
+              search
+            </span>
+            <input type="text" onChange={handleSearch} className="search" />
+          </div>
+          <Carousel responsive={responsive}>{details}</Carousel>
+        </div>
         <div className="aboutUs">
           <h2>About us</h2>
           <p className="story">
@@ -78,11 +84,6 @@ function App() {
             celebrating good food, good times, and the ease of dining with Food
             Den. Cheers to savoring the moment!
           </p>
-        </div>
-
-        <div className="foodCard">
-          <h2 className="menu">Menu</h2>
-          <Carousel responsive={responsive}>{details}</Carousel>
         </div>
 
         <Footer />

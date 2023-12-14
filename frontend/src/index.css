@@ -21,14 +21,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .search {
   padding: 10px 35px;
   background-color: #ffffff;
   color: #242424;
   border-radius: 40px;
-  border: none;
-  outline: none;
+  border-color: #535353;
   font-size: 18px;
 }
 .search-icon {
@@ -107,6 +107,7 @@ button:focus-visible {
   flex-direction: column;
   padding-top: 50px;
   padding-top: auto;
+  padding-bottom: 50px;
 }
 
 .story {
@@ -123,13 +124,13 @@ button:focus-visible {
 .secondViewPort {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
 }
 
 .foodCard {
   flex-grow: 1;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .foodCard h2,
@@ -143,5 +144,9 @@ footer {
 }
 
 .footerLogo {
+  padding-top: 20px;
+}
+
+.small {
   padding-top: 20px;
 }
