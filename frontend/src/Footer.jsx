@@ -1,9 +1,14 @@
 const Footer = () => {
-    return (
-        <footer>
-            <small>Copyright © 2023 GAS coders</small>
-        </footer>
-    );
-}
+  return (
+    <>
+      <footer>
+        <div>
+          <img src="./src/assets/logo.png" alt="logo" className="footerLogo" />
+        </div>
+        <small>Copyright © 2023 GAS Coders</small>
+      </footer>
+    </>
+  );
+};
 
 export default Footer;

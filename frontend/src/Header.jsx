@@ -1,18 +1,23 @@
-const Header = ({ handleSearch, showCart }) => {
+const Header = ({ handleClick, showCart }) => {
   return (
     <header>
       <div>
         <img src="./src/assets/logo.png" alt="logo" className="logo" />
       </div>
-      <div className="search-grp">
-        <span className="material-symbols-outlined search-icon">search</span>
-        <input type="text" onChange={handleSearch} className="search" />
-      </div>
+
       <div>
-        <button className="btn">Home</button>
-        <button className="btn">About us</button>
+        <button className="btn" onClick={() => handleClick("menu")}>
+          Menu
+        </button>
+        <button className="btn" onClick={() => handleClick("about")}>
+          About us
+        </button>
       </div>
-      <span onClick={showCart} style={{cursor: "pointer"}} className="material-symbols-outlined shopping_cart">
+      <span
+        onClick={showCart}
+        style={{ cursor: "pointer" }}
+        className="material-symbols-outlined shopping_cart"
+      >
         shopping_cart
       </span>
     </header>
