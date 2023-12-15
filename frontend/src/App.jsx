@@ -29,6 +29,8 @@ function App() {
   };
 
   let cartItems = [];
+  let cart;
+  let total = 0;
 
   const addToCart = (name, price) => {
     cartItems.push({ name, price });
@@ -44,8 +46,13 @@ function App() {
   };
 
   const showCart = () => {
-    const cart = cartItems.length > 0 ? cartItems : "Cart is empty";
-    console.log(cart);
+    if (cartItems.length > 0) {
+      cart = cartItems;
+      total += cart.reduce((prev, curr) => prev + curr.price, 0);
+    } else {
+      cart = 'Cart is empty';
+    }
+    console.log('Cart:', cart, `Total: ${total} €`);
   };
 
   const details = foodMenu
@@ -68,8 +75,8 @@ function App() {
         <div className="heroImage">
           <h1>Delicious food is just a click away</h1>
           <p className="onPictureText">
-            Whether you're craving the comfort of home-cooked meals, exploring
-            exotic cuisines, or seeking a quick bite on a busy day, we've
+            Whether you&apos;re craving the comfort of home-cooked meals, exploring
+            exotic cuisines, or seeking a quick bite on a busy day, we&apos;ve
             curated a menu that caters to every palate.
           </p>
         </div>
@@ -90,7 +97,7 @@ function App() {
         <div className="aboutUs" ref={aboutUsRef}>
           <h2>About us</h2>
           <p className="story">
-            Welcome to Food Den! your passport to flavor paradise! We're on a
+            Welcome to Food Den! your passport to flavor paradise! We&apos;re on a
             mission to bring exceptional food straight to your doorstep,
             hassle-free. Dive into our curated menu featuring top-notch dishes
             from local gems to international delights. Ordering is a breeze, and
