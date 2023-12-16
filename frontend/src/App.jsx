@@ -67,7 +67,7 @@ function App() {
         },
         {
           path: "/cart",
-          element: <Cart {...cartItems} cartItems={cartItems} total={total} />,
+          element: <Cart {...cartItems} cartItems={cartItems} />,
         },
       ],
     },
