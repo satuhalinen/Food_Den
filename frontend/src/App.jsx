@@ -20,7 +20,6 @@ function App() {
   };
 
   let cartItems = [];
-  let total = 0;
 
   const addToCart = (name, price) => {
     cartItems.push({ name, price });
