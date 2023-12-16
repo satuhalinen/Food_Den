@@ -13,6 +13,10 @@ header {
   align-items: center;
 }
 
+main {
+  min-height: calc(100vh - 170px);
+}
+
 .logo,
 .footerLogo {
   width: 170px;
@@ -59,6 +63,7 @@ a:hover {
   color: white;
   text-align: left;
   flex-grow: 1;
+  height: 79.1vh;
 }
 
 .onPictureText {
@@ -136,6 +141,23 @@ button:focus-visible {
 .foodCard h2,
 .aboutUs h2 {
   padding-bottom: 25px;
+}
+
+table {
+  margin: 10px auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.heading,
+.total {
+  font-weight: 900;
 }
 
 footer {
