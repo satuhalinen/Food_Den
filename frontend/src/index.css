@@ -81,6 +81,16 @@ a:hover {
   padding-bottom: 20px;
 }
 
+.onPictureTextH1 {
+  width: 50vw;
+}
+
+.blackBox {
+  line-height: 1.7;
+  backdrop-filter: brightness(50%);
+  margin-bottom: 70px;
+}
+
 h1 {
   margin-left: 50px;
   font-size: 55px;
@@ -119,6 +129,7 @@ button:focus-visible {
   padding-top: 50px;
   padding-top: auto;
   padding-bottom: 50px;
+  line-height: 1.5;
 }
 
 .story {
@@ -187,6 +198,10 @@ table {
 
 .cartParagraph {
   display: flex;
+  margin: 50px;
+}
+
+.cartEmptyClass {
   margin: 50px;
 }
 

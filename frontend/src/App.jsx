@@ -21,8 +21,8 @@ function App() {
 
   let cartItems = [];
 
-  const addToCart = (name, price) => {
-    cartItems.push({ name, price });
+  const addToCart = (image, name, price) => {
+    cartItems.push({ image, name, price });
 
     let timerInterval;
     Swal.fire({
@@ -43,7 +43,7 @@ function App() {
         url={item.image}
         price={item.price}
         description={item.description}
-        addToCart={() => addToCart(item.name, item.price)}
+        addToCart={() => addToCart(item.image, item.name, item.price)}
       />
     ));
 
@@ -58,9 +58,15 @@ function App() {
         },
         {
           path: "/menu",
-          element: <Menu handleSearch={handleSearch} responsive={responsive} details={details} />,
+          element: (
+            <Menu
+              handleSearch={handleSearch}
+              responsive={responsive}
+              details={details}
+            />
+          ),
         },
-        { 
+        {
           path: "/about",
           element: <About />,
         },
