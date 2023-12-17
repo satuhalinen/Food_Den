@@ -1,8 +1,19 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
 
 header {
@@ -11,10 +22,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-main {
-  min-height: calc(100vh - 170px);
 }
 
 .logo,
@@ -63,7 +70,6 @@ a:hover {
   color: white;
   text-align: left;
   flex-grow: 1;
-  height: 79.1vh;
 }
 
 .onPictureText {
@@ -73,6 +79,16 @@ a:hover {
   margin-left: 50px;
   font-size: 32px;
   padding-bottom: 20px;
+}
+
+.onPictureTextH1 {
+  width: 50vw;
+}
+
+.blackBox {
+  line-height: 1.7;
+  backdrop-filter: brightness(50%);
+  margin-bottom: 70px;
 }
 
 h1 {
@@ -113,23 +129,18 @@ button:focus-visible {
   padding-top: 50px;
   padding-top: auto;
   padding-bottom: 50px;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.outAboutUs {
+  display: flex;
+  justify-content: center;
 }
 
 .story {
   font-size: 24px;
   padding: 0 50px;
-}
-
-.firstViewPort {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.secondViewPort {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .foodCard {
@@ -171,4 +182,46 @@ footer {
 
 .small {
   padding-top: 20px;
+}
+
+.figure {
+  height: 100px;
+}
+
+th,
+td,
+table {
+  border-style: none;
+}
+
+.cartClass {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartParagraph {
+  display: flex;
+  margin: 50px;
+}
+
+.cartEmptyClass {
+  margin: 50px;
+}
+
+.orderFigure {
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+}
+
+td.total {
+  padding-top: 10px;
+}
+
+td {
+  padding: 30px;
 }
