@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
@@ -166,4 +165,38 @@ footer {
 
 .small {
   padding-top: 20px;
+}
+
+.figure {
+  height: 100px;
+}
+
+th,
+td,
+table {
+  border-style: none;
+}
+
+.cartClass {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartParagraph {
+  display: flex;
+  margin: 50px;
+}
+
+.orderFigure {
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+}
+
+td {
+  padding: 60px;
 }
