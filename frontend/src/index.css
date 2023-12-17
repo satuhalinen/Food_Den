@@ -130,6 +130,12 @@ button:focus-visible {
   padding-top: auto;
   padding-bottom: 50px;
   line-height: 1.5;
+  max-width: 800px;
+}
+
+.outAboutUs {
+  display: flex;
+  justify-content: center;
 }
 
 .story {
@@ -212,6 +218,10 @@ table {
   width: 50px;
 }
 
+td.total {
+  padding-top: 10px;
+}
+
 td {
-  padding: 60px;
+  padding: 30px;
 }
