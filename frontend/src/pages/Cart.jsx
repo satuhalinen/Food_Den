@@ -12,7 +12,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
                 <th className="heading"></th>
                 <th className="heading">Item</th>
                 <th className="heading">Price</th>
-                <th className="heading">Reduce</th>
+                <th className="heading">Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -27,9 +27,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
                   <td>{item.name}</td>
                   <td>{item.price} €</td>
                   <td>
-                    <button onClick={() => removeFromCart(i)}>
-                      Remove from cart
-                    </button>
+                    <button onClick={() => removeFromCart(i)}>-</button>
                   </td>
                 </tr>
               ))}
