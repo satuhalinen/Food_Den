@@ -1,4 +1,4 @@
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, removeFromCart }) => {
   return (
     <div className="cartClass">
       {cartItems.length > 0 ? (
@@ -12,6 +12,7 @@ const Cart = ({ cartItems }) => {
                 <th className="heading"></th>
                 <th className="heading">Item</th>
                 <th className="heading">Price</th>
+                <th className="heading">Reduce</th>
               </tr>
             </thead>
             <tbody>
@@ -25,6 +26,11 @@ const Cart = ({ cartItems }) => {
                   </td>
                   <td>{item.name}</td>
                   <td>{item.price} €</td>
+                  <td>
+                    <button onClick={() => removeFromCart(i)}>
+                      Remove from cart
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
