@@ -19,10 +19,12 @@ function App() {
     setSearchQuery(searchString);
   };
 
-  let cartItems = [];
+  const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (image, name, price) => {
-    cartItems.push({ image, name, price });
+    const cartItemsCopy = [...cartItems];
+    cartItemsCopy.push({ image, name, price });
+    setCartItems(cartItemsCopy);
 
     let timerInterval;
     Swal.fire({
@@ -32,6 +34,12 @@ function App() {
       didOpen: () => (timerInterval = setInterval(() => {}, 1000)),
       willClose: () => clearInterval(timerInterval),
     });
+  };
+
+  const removeFromCart = (i) => {
+    const cartItemsCopy = [...cartItems];
+    cartItemsCopy.splice(i, 1);
+    setCartItems(cartItemsCopy);
   };
 
   const details = foodMenu
@@ -72,7 +80,13 @@ function App() {
         },
         {
           path: "/cart",
-          element: <Cart {...cartItems} cartItems={cartItems} />,
+          element: (
+            <Cart
+              {...cartItems}
+              cartItems={cartItems}
+              removeFromCart={removeFromCart}
+            />
+          ),
         },
       ],
     },
