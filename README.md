@@ -10,25 +10,25 @@ Food Den is a school project done on a course called Software Development Team P
 
 ## Live page link
 
-
+https://main--deft-dolphin-a460c5.netlify.app/
 
 ## Visuals
 
 Home page:
 
-![Homepage](./frontend/public/home.png)
+![Homepage](./public/home.png)
 
 Menu page:
 
-![Menupage](./frontend/public/menu.png)
+![Menupage](./public/menu.png)
 
 About us page:
 
-![About us](./frontend/public/aboutUs.png)
+![About us](./public/aboutUs.png)
 
 Cart page:
 
-![Cart page](./frontend/public/cart.png)
+![Cart page](./public/cart.png)
 
 ## Authors
 
